@@ -1,0 +1,23 @@
+①.引入axios
+终端输入: npm install axios
+
+②.main.js加上配置
+import axios from 'axios'             
+import Qs from 'qs'
+//QS是axios库中带的，不需要我们再npm安装一个
+ 
+Vue.prototype.$axios = axios;		//$axios：在需要axios的vue文件中引用axios的别名，比如this.$axios.post()...
+Vue.prototype.qs = Qs;		//如果写成Vue.prototype.$http = axios,那么要改成this.$http.post()...
+
+③.请求格式:
+this.$axios({
+                method:'post',
+                url:'http://127.0.0.1:3000/',
+                data:this.qs.stringify({    //这里是发送给后台的数据
+                      name:"food",
+                    })
+                }).then((response) =>{          //这里使用了ES6的语法
+                    console.log(response)       //请求成功返回的数据
+                }).catch((error) =>{
+                    console.log(error)       //请求失败返回的数据
+                })

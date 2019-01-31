@@ -1,0 +1,115 @@
+hr{
+    position: absolute;
+    width: 803px;
+    height: 1px;
+    margin-left: 92px;
+    margin-top: 79px;
+    background-color: #B6B6B6;
+}
+.wai{
+    margin-left: 200px;
+    margin-top: 200px;
+    position: relative;
+    width:960px;
+    height:580px;
+    background:rgba(255,255,255,1);
+    box-shadow:0px 1px 3px 0px rgba(0,0,0,0.2);
+}
+.hyzc{
+    position: absolute;
+    margin-left: 171px;
+    margin-top: 27px;
+}
+.hyzc p{
+    color: #4A4A4A;
+    font-size: 24px;
+    height: 31px;
+}
+.yyzz {
+    position: absolute;
+    margin-left: 786px;
+    margin-top: 50px;
+}
+.zi1{
+    position: absolute;
+    margin-left: 201px;
+    margin-top:115px;
+}
+.zi2{
+    position: absolute;
+    margin-left: 229px;
+    margin-top:173px;
+}
+.zi3{
+    position: absolute;
+    margin-left: 201px;
+    margin-top:233px;
+}
+.zi4{
+    position: absolute;
+    margin-left: 215px;
+    margin-top:293px;
+}
+.zi5{
+    position: absolute;
+    margin-left: 201px;
+    margin-top:353px;
+}
+.zi6{
+    position: absolute;
+    margin-left: 173px;
+    margin-top:413px;
+}
+.shuru{
+    width:360px;
+    height:40px;
+    background:rgba(255,255,255,1);
+    border-radius:5px;
+    border:1px solid rgba(151,151,151,1);
+}
+.ru1{
+    position: absolute;
+    margin-left: 288px;
+    margin-top:101px;
+}
+.ru2{
+    position: absolute;
+    margin-left: 288px;
+    margin-top:161px;
+}
+.ru3{
+    position: absolute;
+    margin-left: 288px;
+    margin-top:221px;
+}
+.ru4{
+    position: absolute;
+    margin-left: 288px;
+    margin-top:281px;
+}
+.ru5{
+    position: absolute;
+    margin-left: 288px;
+    margin-top:341px;
+}
+.ru6{
+    position: absolute;
+    margin-left: 288px;
+    margin-top:401px;
+}
+.aa1{
+    position: absolute;
+    margin-left: 288px;
+    margin-top:463px;
+}
+.bb1{
+    width:100px;
+    height:40px;
+    background:rgba(74,144,226,1);
+    border-radius:5px;
+    border:1px solid rgba(74,144,226,1);
+    position: absolute;
+    margin-left: 288px;
+    margin-top:503px;
+    color: #fff;
+}

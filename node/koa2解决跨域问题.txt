@@ -1,0 +1,12 @@
+1、安装  koa2-cors
+
+npm install --save koa2-cors
+
+2、引入  koa2-cors 并且配置中间件(在app.js文件配置)
+
+var Koa = require('koa');
+var cors = require('koa2-cors');
+
+
+var app = new Koa();
+app.use(cors());

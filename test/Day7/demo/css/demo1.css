@@ -1,0 +1,89 @@
+@charset "utf-8";
+body, ul, ol, dl, dd, p, h1, h2, h3, h4, h5, h6, pre {margin:0;}
+a {text-decoration: none;}
+td,th{border: 1px #ddd solid;}
+.tab{
+  list-style: none;
+}
+.box ul{
+  padding: 0;
+}
+  h1{
+    text-align: center;
+  }  
+  .box {
+    width: 1000px;
+    height: 475px;
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+  
+  .tab {
+    border: 1px solid #ddd;
+    border-bottom: 0;
+    height: 36px;
+    width: 400px;
+  }
+  
+  .tab li {
+    position: relative;
+    float: left;
+    width: 80px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    cursor: pointer;
+    border-top: 4px solid #fff;
+  }
+  
+  .tab span {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    background: #ddd;
+    width: 1px;
+    height: 14px;
+    overflow: hidden;
+  }
+  
+  .homeworks {
+    width: 1002px;
+    border: 1px solid #ddd;
+    height: 476px;
+  }
+  
+  .homeworks .main {
+    float: left;
+    display: none;
+  }
+  
+  .homeworks .main.selected {
+    display: block;
+  }
+  
+  .tab li.active {
+    border-color: red;
+    border-bottom: 0;
+  }
+
+  .homeworkDiv{
+        width: 1000px;
+        margin-top: 50px;
+        overflow: auto;
+  }
+
+.homeworkTwoTable{
+  margin: 0 auto; 
+}
+.homeworkTwoTable{
+  margin: 0 auto; 
+}
+.homeworkFour ul{
+  height: 95px;
+  overflow: auto
+}
+.tableBox{
+  width: 400px;
+  height: 135px;
+  overflow: auto;
+}

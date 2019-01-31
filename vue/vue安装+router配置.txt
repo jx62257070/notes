@@ -1,0 +1,49 @@
+创建项目：
+vue init webpack projectName
+进入项目，下载依赖：
+npm install 或者 cnpm install
+运行项目：
+npm run dev
+
+
+vue 路由安装
+npm install vue-router
+
+
+vue 路由步骤
+①.a.src文件中建立router文件夹
+    b.router文件夹中创建router.js文件
+②.编辑router.js文件
+    a.如果在一个模块化工程中使用它，必须要通过 Vue.use() 明确地安装路由功能，添加:
+       import Vue from 'vue'
+       import Router from 'vue-router'
+       Vue.use(Router)
+    b.router.js文件中import导入子页面相对的vue文件路径
+       例如:import demo1 from '../components/demo1'
+    c.在export default中返回new Router
+       例:export default new Router({
+             .......
+            })
+    d.在routes:[]中添加路由
+       例如:
+	routes: [
+   	 {
+     	 path:'/',
+     	 name:'demo1',
+     	 component:demo1
+   	 },]
+③.main.js文件关联router.js文件
+    a.明确地安装路由功能（同上②.a）
+    	import Vue from 'vue'
+    	import VueRouter from 'vue-router'
+    	Vue.use(VueRouter)
+    b.在new Vue（{}）中添加路由
+       例:
+	new Vue({
+ 	 el: '#app',
+ 	 router,
+ 	 components: { App },
+  	template: '<App/>'
+	})
+④.在App.vue文件中添加节点
+        <router-link to="/">Go to demo1</router-link>//router-link  会变成a标签

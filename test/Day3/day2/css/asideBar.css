@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+/* 侧边栏 */
+.asideBar{
+    width:200px;
+    height:611px;
+    
+}
+/* 侧边栏上部 */
+.asidetop{
+   
+    width:198px;
+    height:40px;
+    background:rgba(238,238,238,1);
+    line-height: 40px;
+    text-align: center;
+    
+}
+/* “学生信息”、“其他”字体设置 */
+.mystu,.other{ float:left;
+    display: block;
+    text-align: center;
+    width:50%;
+    height:40px;
+    background:rgba(255,255,255,1);
+    border-radius:0px 3px 0px 0px;
+    
+}
+.other{
+    /* clear: both; */
+    background:rgba(238,238,238,1);
+}
+/* .mystu:hover,.other:hover{
+    box-shadow:1px 0px 5px rgba(4,0,0,0.2);
+    background:rgba(255,255,255,1);
+} */
+/* 每个学生消息栏样式设置 */
+.stu1{
+    position: relative;
+    width:199px;
+    height:57px;
+    clear:both;
+    border-bottom:  1px #E7E7E7 solid;    /*下边框线*/
+}
+/* 图片样式设置 */
+.img1{
+    position: absolute;
+    left:20px;
+    top:10px;
+    width:40px;
+    height:40px;
+}
+/* 名字样式设置 */
+.name{
+   position: absolute;
+   left:69px;
+   top:20px;
+    width:47px;
+    height:14px;
+    font-size:14px;
+    font-family:PingFangSC-Regular;
+    color:rgba(0,0,0,1);
+    line-height:0px; 
+}
+/* 日期样式设置 */
+.date{
+    position: absolute;
+    left:69px;
+    top:40px;
+    width:61px;
+    height:9px;
+    font-size:12px;
+    font-family:ArialMT;
+    color:rgba(102,102,102,1);
+    line-height:0px;
+}
+/* 消息样式设置 */
+.message{
+    position: absolute;
+    left:154px;
+    top:10px;
+    width:26px;
+    height:20px;
+    background:rgba(248,75,69,1);
+    border-radius:6px;
+    box-shadow:1px 0px 5px rgba(0,0,0,0.2);
+    font-size:14px;
+    font-family:PingFangSC-Regular;
+    color:rgba(255,255,255,1);
+    line-height:20px;
+    text-align: center;
+}
+.total{
+    width:190px;
+    height:20px;
+    font-size:12px;
+    font-family:MicrosoftYaHei;
+    color:rgba(51,51,51,1);
+    line-height:20px;
+    
+    text-align: right;
+    padding-left: 10px;
+}

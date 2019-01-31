@@ -1,0 +1,61 @@
+            var json = [{
+                    "ordNum": "1",
+                    "type": "1",
+                    "num": "5",
+                    "max": "3",
+                    "title": "题目名称有点长有点长有点长?",
+                    "Qu": [{
+                        id: '1',
+                        name: "选项一",
+                        status: ''
+                    }, {
+                        id: '2',
+                        name: "选项二",
+                        status: ''
+                    }, {
+                        id: '3',
+                        name: "选项三",
+                        status: ''
+                    }]
+                },
+                {
+                    "ordNum": "2",
+                    "type": "2",
+                    "num": "2",
+                    "max": "1",
+                    "title": "题目名称有点长有点长有点长?",
+                    "Qu": [{
+                        id: '1',
+                        name: "选项一",
+                        status: ''
+                    }, {
+                        id: '2',
+                        name: "选项二",
+                        status: ''
+                    }, {
+                        id: '3',
+                        name: "选项三",
+                        status: ''
+                    }]
+                }
+            ]
+            var ul = $('<ul></ul>');
+            var li = '';
+            var divSel = '';
+
+            //插入题目
+            json.forEach((item) => {
+                li = $('<li></li>');
+                var baseInfo = $('<div>基本信息</div>');
+                baseInfo.appendTo(li);
+                divSel = $('<ul></ul>');
+                item.Qu.forEach((subItem) => {
+                    var selList = $('<li></li>');
+                    $(`<input type="checkbox" name="fuxuan"><div>${subItem.name}</div>`).appendTo(selList);
+                    selList.appendTo(divSel);
+                })
+                divSel.appendTo(li);
+                li.appendTo(ul)
+            })
+            console.log(ul);
+            ul.appendTo('body');

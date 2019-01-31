@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>随机数字</title>
+<link rel="stylesheet" href="./css/demo2.css">
+</head>
+
+<body>
+    <!-- 定义一个函数，实现根据我传入的数字返回0到这个数字的随机整数，比如 3->2,45.55->21 -->
+    <div class="box">
+        <input type="text" placeholder="请输入上限" class="inp">
+        <p class="exp">随机数字如下</p>
+        <input type="text" class="outp">
+        <input type="button" value="输出随机数字" class="but">
+
+        <script>
+            window.onload = function () {
+                $inp = document.getElementsByClassName("inp")[0];
+                $outp = document.getElementsByClassName("outp")[0];
+                $but = document.getElementsByClassName("but")[0];
+                $but.onclick=function(){
+                    if(isNaN($inp.value))//判断是否是数字
+                    {
+                        $outp.value=""
+                        $inp.value="";
+                        document.getElementsByClassName("exp")[0].innerHTML="请输入数字";
+                        // var $p = document.createElement('p');
+                        // $p.innerHTML = "请输入数字";
+                        // var exc=document.getElementsByClassName('box')[0];
+                        // exc.appendChild($p);
+                    }
+                    else{
+                        document.getElementsByClassName("exp")[0].innerHTML="随机数字如下";
+                        $outp.value=Math.round(Math.random()*$inp.value);
+                    }
+                }
+            }
+        </script>
+    </div>
+</body>
+
+</html>

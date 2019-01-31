@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>添加/删除内容</title>
+    <link rel="stylesheet" href="./css/demo4.css">
+</head>
+
+<body>
+    <!-- 页面上一个输入框，用于输入字符串，输入的内容会在页面一块区域显示，
+        每次输入的内容独自占一行，两个按钮，一个用于将输入框内的内容添加到显示区域，
+        一个用于删除最后一次输入的内容。附加：可以根据自己喜好，任意添加其他功能的按钮 -->
+    <div class="box">
+        <h3>输入：</h3>
+        <input type="text" id="inp" placeholder="请输入内容">
+        <input type="button" id="add" value="添加">
+        <input type="button" id="del" value="删除">
+        <input type="button" id="big" value="内容转换成大写字母">
+        <input type="button" id="sma" value="内容转换成小写字母">
+        <input type="button" id="but" value="输出随机数字">
+        <input type="button" id="bigf" value="字体变大">
+        <input type="button" id="smaf" value="字体缩小">
+    </div>
+    <div class="box2"></div>
+
+    <script>
+        window.onload = function () {
+            $inp = document.getElementById("inp")
+            $add = document.getElementById("add");
+            $del = document.getElementById("del");
+            $big = document.getElementById("big");
+            $sma = document.getElementById("sma");
+            $but = document.getElementById("but");
+            $bigf = document.getElementById("bigf");
+            $smaf = document.getElementById("smaf");
+            var size = 13;
+            $add.onclick = function () { //添加
+                var $p = document.createElement('p');
+                $p.innerHTML = "添加的内容为：" + $inp.value;
+                $p.classList.add("exp")
+                var exc = document.getElementsByClassName('box2')[0];
+                exc.appendChild($p);
+                // console.log("aaa");
+            }
+            $del.onclick = function () { //删除
+                var delp = document.getElementsByClassName("exp");
+                delp[delp.length - 1].parentNode.removeChild(delp[delp.length - 1]);
+                // console.log("bbb");
+            }
+            $sma.onclick = function () { //小写
+                var $p = document.createElement('p');
+                $p.innerHTML = "转换小写后：" + $inp.value.toLowerCase();
+                $p.classList.add("exp")
+                var exc = document.getElementsByClassName('box2')[0];
+                exc.appendChild($p);
+            }
+            $big.onclick = function () { //大写
+                var $p = document.createElement('p');
+                $p.innerHTML = "转换大写后：" + $inp.value.toUpperCase();
+                $p.classList.add("exp")
+                var exc = document.getElementsByClassName('box2')[0];
+                exc.appendChild($p);
+            }
+            $but.onclick = function () { //随机数字
+                if (isNaN($inp.value)) //判断是否是数字
+                {
+                    $inp.value = "";
+                    alert("请输入数字！");
+                    // console.log("aaa");
+                } else {
+                    // console.log("bbb");
+                    var $p = document.createElement('p');
+                    var b = Math.round(Math.random() * $inp.value);
+                    $p.innerHTML = "随机数字如下：" + b;
+                    $p.classList.add("exp");
+                    var exc = document.getElementsByClassName('box2')[0];
+                    exc.appendChild($p);
+                }
+            }
+            $bigf.onclick = function () {
+                var pText = document.getElementsByClassName("box2")[0];
+                if (size == 30) {   　　　　　　　　　　　　
+                    size =30; 　　　　　　
+                    pText.style.fontSize = size + 'px';　　
+                }
+                else{
+                    size ++;　　　　　　　
+                    pText.style.fontSize = size + 'px';　
+                }
+            }
+            $smaf.onclick = function () {
+                var pText = document.getElementsByClassName("box2")[0];
+                if (size == 5) {   　　　　　　　　　　　　
+                    size =5; 　　　　　　
+                    pText.style.fontSize = size + 'px';　　
+                }
+                else{
+                    size --;　　　　　　　
+                    pText.style.fontSize = size + 'px';　
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

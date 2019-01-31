@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>排序</title>
+</head>
+
+<body>
+    <!-- 对一个打乱的数组进行倒序排序，不用冒泡排序的形式 -->
+    <script>
+        window.onload = function () {
+            function sortNum(a, b) {
+                return b-a;
+            }
+            var $arr = new Array("80", "16", "50", "6", "100", "1", "111", "12");
+            document.write("原数组：");
+            document.write($arr+"<br />");
+            document.write("现数组：");
+            document.write($arr.sort(sortNum));
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>按钮控制文字显示</title>
+    <link rel="stylesheet" href="./css/demo1.css">
+</head>
+
+<body>
+    <!-- 查阅资料并且实现用按钮控制网页上一段文字的显示 -->
+    <div class="box">
+        <p class="zzh">大咖吼，我系渣渣辉。</p>
+        <input type="button" value="显示" class="xs">
+        <input type="button" value="隐藏" class="yc">
+        <input type="button" value="显示/隐藏" class="qh">
+    </div>
+
+    <script>
+        window.onload = function () {
+            var $xs = document.getElementsByClassName("xs")[0];
+            var $yc = document.getElementsByClassName("yc")[0];
+            var $qh = document.getElementsByClassName("qh")[0];
+            var $zzh = document.getElementsByClassName("zzh")[0];
+            /*visibility*/
+            $xs.onclick = function () {
+                $zzh.style.visibility = "visible";
+            }
+            $yc.onclick = function () {
+                $zzh.style.visibility = "hidden";
+            }
+            $qh.onclick = function () {
+                if ($zzh.style.visibility == "visible") {
+                    $zzh.style.visibility = "hidden";
+                } else {
+                    $zzh.style.visibility = "visible";
+                }
+                //     /*display*/
+                //     $xs.onclick = function () {
+                //     $zzh.style.display = "block";
+                // }
+                // $yc.onclick = function () {
+                //     $zzh.style.display = "none";
+                // }
+                // $qh.onclick = function () {
+                //     if ($zzh.style.display == "block") {
+                //         $zzh.style.display = "none";
+                //     } else {
+                //         $zzh.style.display = "block";
+                //     } 
+            }
+        }
+    </script>
+</body>
+
+</html>

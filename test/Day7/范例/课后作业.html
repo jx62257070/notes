@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>校宝在线Course官网</title>
+  <link rel="stylesheet" href="./main.css">
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  
+  <script>
+    $(document).ready(function () {
+      //给所有的div元素添加高度属性为30px
+      $("div").height(30);
+      //改变id为one的元素的背景颜色为红色
+      $("#one").css("backgroundColor", "red");
+      //改变元素名为div的所有元素的背景色为#bbffaa，字体颜色为红色
+      $("div").css({
+        color: "red",
+        backgroundColor: "#bbffaa"
+      });
+      //改变第二个div元素的背景颜色为蓝色
+      $("div").eq(1).css("backgroundColor", "blue").click(function () {
+        alert(1)
+      })
+      //匹配到标签是div或者类名存在a的元素
+      console.log($("div,.a").length);
+      //匹配标签是div中类名存在a的元素
+      console.log($("div.a").length);
+
+    })
+  </script>
+</head>
+
+<body>
+  <h1>培训演示</h1>
+  <h1>tengda.lin@xiaobao100.com</h1>
+  <div id="one" group="1">111</div>
+  <div id="1">222</div>
+  <div id="2">333</div>
+  <div id="3" class="a" group="2">444</div>
+  <div id="4" class="a">555</div>
+  <p id="4" class="a b">666</p>
+  <p id="4">777</p>
+  <div id="5" group="1">
+    <p id="6" group="1">888</p>
+  </div>
+  <br>
+  <a href="http://tool.oschina.net/apidocs/apidoc?api=jquery">jquery在线查询</a>
+  <h1>作业1：该页面中点击所有的p标签，都能够弹出对应的文本内容。</h1>
+  <script type="text/javascript">
+    //选择p标签之后遍历，同时限定了只能取到此函数上方的p标签。
+    $("p").each((index, element) => {
+      $(element).click(() => {
+        alert($(event.target).text());
+        event.stopPropagation();
+      });
+    });
+    // 参考
+    // $("p").click(function(){
+    //   alert($(this).text());
+    //   event.stopPropagation();
+    // });
+  </script>
+  <br>
+  <br>
+  <h1>作业2：使第一个 table 隔行变色。</h1>
+  <table border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <th>姓名</th>
+      <th>年级</th>
+      <th>班级</th>
+    </tr>
+    <tr>
+      <td>张三</td>
+      <td>一年级</td>
+      <td>一班</td>
+    </tr>
+    <tr>
+      <td>李四</td>
+      <td>二年级</td>
+      <td>一班</td>
+    </tr>
+    <tr>
+      <td>王五</td>
+      <td>五年级</td>
+      <td>一班</td>
+    </tr>
+  </table>
+  <br>
+  <table border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <th>姓名</th>
+      <th>年级</th>
+      <th>班级</th>
+    </tr>
+    <tr>
+      <td>张三</td>
+      <td>一年级</td>
+      <td>一班</td>
+    </tr>
+    <tr>
+      <td>李四</td>
+      <td>二年级</td>
+      <td>一班</td>
+    </tr>
+    <tr>
+      <td>王五</td>
+      <td>五年级</td>
+      <td>一班</td>
+    </tr>
+  </table>
+  <script type="text/javascript">
+    // 改变第一个表格的样式，使其隔行变色
+    $("table:first tr:odd td").css("backgroundColor", "#d8e6f2");
+    // 参考
+    // $("table:first tr:odd").css("background", "#d8e6f2");
+  </script>
+  <br>
+  <br>
+  <h1>作业3：点击 button ，弹出被选中的个数。</h1>
+  <input type="checkbox" name="test" />
+  <input type="checkbox" name="test" />
+  <input type="checkbox" name="test" />
+  <input type="checkbox" name="test" />
+  <input type="checkbox" name="test" />
+  <input type="checkbox" name="test" />
+  <button id="btn">您选中的个数</button>
+  <script type="text/javascript">
+    // 点击事件，弹出选择的数量
+    $("#btn").click(() => {
+      alert($("input[type='checkbox']:checked").length);
+      event.stopPropagation();
+    });
+    // 参考
+    // $("#btn").click(function(){
+    //   alert($(":checkbox:checked").length);
+    // });
+  </script>
+  <br>
+  <br>
+  <h1>作业4：分类添加内容</h1>
+  <h5>需求1：点击 submit 按钮时,检查是否选择类型,若没有选择给出提示: "请选择类型"</h5>
+  <h5>需求2：点击 submit 按钮时,检查文本框是否有输入(去除前后空格),若没有输入,则给出提示:"请输入内容"</h5>
+  <h5>需求3：点击 submit 成功提交后，在对应的类型下面增加新增的内容</h5>
+  <h5>需求4：所有li(包括新增的li)都能响应 click 事件: 弹出 li 的文本值.</h5>
+  <p>城市</p>
+  <ul id="city">
+    <li>北京</li>
+    <li>上海</li>
+    <li>杭州</li>
+    <li>首尔</li>
+  </ul>
+  <p>游戏</p>
+  <ul id="game">
+    <li>王者农药</li>
+    <li>LOL</li>
+    <li>毒奶粉</li>
+    <li>Dota</li>
+  </ul>
+  类型：
+  <input type="radio" name="type" value="city">城市
+  <input type="radio" name="type" value="game">游戏
+  <br> name:
+  <input type="text" name="name" />
+  <input type="submit" value="Submit" id="submit" />
+  <script type="text/javascript">
+    // 提交按钮事件
+    $("#submit").click(() => {
+      // 得到选中的radio
+      //参考 let $checkedRadio = $(":radio:checked");
+      let checkedRadio = $("input[type='radio']:checked");
+      // 得到输入框的值
+      let newString = $("input[type='text']").val().trim();
+      //判断radio是否选中和输入框是否非空
+      if (checkedRadio.length === 0) {
+        alert('请选择类型');
+      } else if (newString === "") {
+        alert('请输入内容');
+      } else {
+        $("#" + checkedRadio.val()).append(`<li>${newString}</li>`);
+      }
+      event.stopPropagation();
+    });
+    // ul点击事件
+    $("ul").each((index, element) => {
+      $(element).on('click', 'li', () => {
+        alert($(event.target).text());
+      })
+    });
+    // 参考
+    // $("#city,#game").on("click",'li',function(){
+    //   event.stopPropagation();
+    //   alert($(this).text());
+    // })
+  </script>
+  <br>
+  <br>
+  <h1>出师作业：增删改</h1>
+  <h5>需求1：所有输入框都应该有非空校验</h5>
+  <h5>需求2：添加新员工到表格的第一行</h5>
+  <h5>需求3：点击删除删除对应行</h5>
+  <h5>需求4：点击编辑，输入框内显示该行数据，title变成‘编辑新员工’，点submit修改对应行内容</h5>
+  <center>
+    <p>添加新员工</p>
+    name:
+    <input type="text" name="name" id="name" />&nbsp;&nbsp; email:
+    <input type="text" name="email" id="email" />&nbsp;&nbsp; salary:
+    <input type="text" name="salary" id="salary" />
+    <br>
+    <br>
+    <button id="addEmpButton" value="abc">Submit</button>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <table id="employeetable"  border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Salary</th>
+        <th>&nbsp;</th>
+        <th>&nbsp;</th>
+      </tr>
+      <tr>
+        <td>Tom</td>
+        <td>tom@tom.com</td>
+        <td>5000</td>
+        <td>
+          <a href="javascript:void(0);" class="Delete">Delete</a>
+        </td>
+        <td>
+          <a href="javascript:void(0);" class="Edit">Edit</a>
+        </td>
+      </tr>
+      <tr>
+        <td>Jerry</td>
+        <td>jerry@sohu.com</td>
+        <td>8000</td>
+        <td>
+          <a href="javascript:void(0);" class="Delete">Delete</a>
+        </td>
+        <td>
+          <a href="javascript:void(0);" class="Edit">Edit</a>
+        </td>
+      </tr>
+      <tr>
+        <td>Bob</td>
+        <td>bob@tom.com</td>
+        <td>10000</td>
+        <td>
+          <a href="javascript:void(0);" class="Delete">Delete</a>
+        </td>
+        <td>
+          <a href="javascript:void(0);" class="Edit">Edit</a>
+        </td>
+      </tr>
+    </table>
+  </center>
+  <script type="text/javascript">
+    // 定义一个变量$editLine接受编辑行的JQuery对象
+    let $editLine = null;
+    // submit按钮点击事件
+    $("#addEmpButton").click(() => {
+      // 分别获得三个输入框去掉首尾空格的值
+      let name = $("#name").val().trim();
+      let email = $("#email").val().trim();
+      let salary = $("#salary").val().trim();
+      // 判断输入框是否为空
+      if (name === "" || email === "" || salary === "") {
+        alert("输入内容不能为空");
+      } else {
+        // 若是@editLine为null，说明当前为添加状态，按钮执行添加动作，否则执行修改操作
+        if ($editLine === null) {
+          // 在表格前面添加一行
+          $("#employeetable").prepend(
+            `<tr>
+              <td>${name}</td>
+              <td>${email}</td>
+              <td>${salary}</td>
+              <td><a href="javascript:void(0);" class="Delete">Delete</a></td>
+              <td><a href="javascript:void(0);" class="Edit">Edit</a></td>
+            </tr>`
+          );
+          // 由于表头应该为第一行，因此将表头上调
+          $("#employeetable tr:nth(0)").insertAfter('#employeetable tr:nth(1)');
+        } else {
+          // 改变当前行的内容
+          $editLine.html(
+            `<td>${name}</td>
+              <td>${email}</td>
+              <td>${salary}</td>
+              <td><a href="javascript:void(0);" class="Delete">Delete</a></td>
+              <td><a href="javascript:void(0);" class="Edit">Edit</a></td>`
+          );
+          // 将$editLine重新置空
+          $editLine = null;
+          // 改变标题
+          $("center p").text("添加新员工");
+        }
+        // 清空输入框
+        $("#name,#email,#salary").val("");
+      }
+      event.stopPropagation();
+    });
+    // 编辑事件
+    $("#employeetable").on('click', '.Edit', function () {
+        // 改变标题
+        $("center p").text("编辑新员工");
+        //console.log($(this).parent().parent());
+        // 设置当前编辑行
+        $editLine = $(this).parent().parent();
+        // 分别获取name,email,salary
+        let ele = $editLine.text().trim().split('\n');
+        let name = ele[0].trim();
+        let email = ele[1].trim();
+        let salary = ele[2].trim();
+        // 将要编辑的内容写入输入框
+        $("#name").val(name);
+        $("#email").val(email);
+        $("#salary").val(salary);
+        
+    })
+    // 删除事件
+    $("#employeetable").on('click', '.Delete', function () {
+      $(this).parent().parent().remove();
+    });
+  </script>
+</body>
+
+</html>

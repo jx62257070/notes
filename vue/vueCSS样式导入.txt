@@ -1,0 +1,7 @@
+<style scoped>
+@import "./css/demo4.css";
+</style>
+
+
+
+*scoped:使前一个页面的css样式不会保留到下一个页面

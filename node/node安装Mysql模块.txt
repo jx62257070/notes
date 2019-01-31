@@ -1,0 +1,45 @@
+cmd安装淘宝镜像
+npm install -g cnpm
+
+在项目中安装MySQL模块
+cnpm install mysql 
+
+配置环境变量
+在环境变量中增加C:\Program Files\MySQL\MySQL Server 8.0\bin
+变量名称可以随便起，比方说mysql_home
+变量值为C:\Program Files\MySQL\MySQL Server 8.0\bin
+
+
+报错Client does not support authentication protocol requested by server
+1.通过命令行进入解压的mysql根目录(C:\Program Files\MySQL\MySQL Server 8.0\bin)下。
+2.登陆数据库 
+mysql -u root -p
+3.输入root的密码 
+Enter password: ******
+4.更改加密方式 
+mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'password' PASSWORD EXPIRE NEVER;
+5.更改密码：该例子中 123456为新密码 
+mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '123456';
+6.刷新： 
+mysql> FLUSH PRIVILEGES;
+
+
+
+js文件格式
+
+var mysql = require('mysql');//引用Mysql
+var connection = mysql.createConnection({//配置连接
+    host: 'localhost',//数据库地址
+    user : "root",//数据库用户
+    password: "sj123654",//数据库密码
+    database : "world"//需要连接的数据库
+});
+
+connection.connect();//连接数据库
+
+connection.query('select * from city',function(err,rows,fields){//执行sql语句
+    if(err) throw err ;
+    console.log('thesolution is:' ,rows[0]);
+});
+
+connection.end();//断开连接

@@ -1,0 +1,133 @@
+@charset "utf-8";
+/* 主框体框体 end*/
+.box-csj{
+    position: relative;
+    margin-top: 20px;
+    width:740px;
+    height:340px;
+    /* border:1px blueviolet solid; */
+    background:rgba(255,255,255,1);
+    border-radius:3px;
+    box-shadow:1px 0px 5px rgba(4,0,0,0.2);
+}
+/* 主框体框体 end*/
+/* 标题 */
+.title-csj{
+    position: absolute;
+    width:63px;
+    height:14px;
+    margin-left: 339px;
+    margin-top: 21px;
+    font-size:14px;
+    font-family:NotoSansHans-Regular;
+    color:rgba(0,0,0,1);
+    line-height:0px;
+}
+/* 标题 end*/
+
+/* 图片群 */
+/* 图片群第一行主体 */
+.body-csj{
+    position: absolute;
+    width: 740px;
+    height: 300px;
+    margin-top: 40px;
+   
+}
+/* 图片群第一行主体 end*/
+/* 图片群第二行主体 */
+.body-csj2{
+    position: absolute;
+    width: 740px;
+    height: 300px;
+    margin-top: 180px;
+    
+}
+/* 图片群第二行主体 end*/
+/* 图片群组件 */
+.picture-csj{
+    position: relative;
+    width:100px;
+    height:120px;
+    margin-left: 20px;
+    background:rgba(255,255,255,1);
+    border:2px solid #fff;
+    border-radius:6px;
+    
+}
+
+/* 图片群头像 */
+.photo-csj{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    margin: 20px;
+    background-image: url('../img/3.png')
+}
+/* 图片群头像 end*/
+/* 图片群姓名 */
+.name1{
+    position: absolute;
+    width: 27px;
+    height: 14px;
+    margin: 90px 37px 16px 36px;
+}
+/* 图片群姓名 end*/
+/* 图片群组件 end*/
+/* 鼠标经过边框变红特效 */
+.picture-csj:hover{
+    border-color: #F83C4A;
+}
+/* 鼠标经过边框变红特效 end*/
+/* 圆形组件 */
+.addpicture-csj{
+    position: relative;
+    margin-left: 20px;
+}
+.addp-csj{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    margin: 20px;
+    border-radius: 50%;
+    background-color:#CCCCCC;
+}
+.waiyuan{
+    margin: 2px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.neiyuan{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    margin: 13px;
+    background-image: url('../img/4.png');
+}
+/* 圆形组件 end*/
+/* 带×组件 */
+.expicutre-csj{
+    border-color: #ccc;
+}
+.xiaocha{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 84px;
+    top:-12px;
+    border-radius: 50%;
+    background-color: #F83C4A;
+}
+.xiaocha2{
+    width: 11px;
+    height: 11px;
+    margin: 6px auto;
+    background-image: url('../img/5.png');
+    background-size: 11px 11px;/*小图标的大小*/
+    background-repeat: no-repeat;/*背景小图标不重复*/
+    text-indent: -9999em;
+}
+/* 带×组件 end */
+/* 图片群 end */

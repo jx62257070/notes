@@ -1,0 +1,20 @@
+前端规范:				https://www.w3cschool.cn/webdevelopment/jpbfrozt.html
+
+ES6:				http://es6.ruanyifeng.com/#README
+
+电子书搜索:			https://www.jiumodiary.com/
+  
+前端Api手册:			http://www.aseoe.com/manual
+ 
+实时代码在线预览以及分享:		codepen.io
+
+慕课网:				https://www.imooc.com/
+
+开发月报:				https://www.kancloud.cn/jsfront/month/241662
+
+原生jsdemo			http://www.fgm.cc/learn/
+
+
+
+
+

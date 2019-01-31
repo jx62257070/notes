@@ -1,0 +1,191 @@
+.nav{
+    display: flex;
+    flex-direction:row  ;/*主轴的方向 row | row-reverse | column | column-reverse*/
+    flex-wrap:nowrap;/*换行 nowrap | wrap | wrap-reverse*/
+    justify-content:space-between;/*主轴上的对齐方式 flex-start | flex-end | center | space-between | space-around*/
+    align-items:flex-start;/*交叉轴上的对齐方式 flex-start | flex-end | center | baseline | stretch*/
+    /*align-content:  ;*/
+    /*多根轴线的对齐方式 flex-start | flex-end | center | space-between | space-around | stretch*/  
+    width: 100%;
+    height: 40px;
+    background-color: #2D2D2D;
+}
+.logo a{
+    display: inline-block;
+    color: #fff;
+    margin-left: 20px;
+    margin-top: 8px;
+}
+/* 左对齐 */
+.navRight{
+    display: flex;
+    flex-direction:row  ;/*主轴的方向 row | row-reverse | column | column-reverse*/
+    flex-wrap:nowrap;/*换行 nowrap | wrap | wrap-reverse*/
+    justify-content:flex-start;/*主轴上的对齐方式 flex-start | flex-end | center | space-between | space-around*/
+    align-items:flex-start;/*交叉轴上的对齐方式 flex-start | flex-end | center | baseline | stretch*/
+    /*align-content:  ;*/
+    /*多根轴线的对齐方式 flex-start | flex-end | center | space-between | space-around | stretch*/
+}
+.pages,.user,.line{
+    margin-top: 5px;
+}
+.pageOne{
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    cursor:pointer;
+    margin-right: 20px;
+}
+.pageOne:hover{
+    border-bottom:2px solid #3f89f7;
+}
+.line{
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    margin-right: 20px;
+}
+.user{
+    width:30px;
+    height:30px;
+    margin-right: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor:pointer;
+}
+/* 内部元素居中 */
+.backGround,.quTitle,.quTime{
+    display: flex;
+    flex-direction:row  ;/*主轴的方向 row | row-reverse | column | column-reverse*/
+    flex-wrap:nowrap;/*换行 nowrap | wrap | wrap-reverse*/
+    justify-content:center;/*主轴上的对齐方式 flex-start | flex-end | center | space-between | space-around*/
+    align-items:flex-start;/*交叉轴上的对齐方式 flex-start | flex-end | center | baseline | stretch*/
+    /*align-content:  ;*/
+    /*多根轴线的对齐方式 flex-start | flex-end | center | space-between | space-around | stretch*/  
+}
+.backGround{
+    width: 100%;
+    height:712px;
+    background:rgba(235,235,235,1);
+}
+.box{
+    width:960px;
+    height:570px;
+    margin-top:59px;
+    background:rgba(255,255,255,1);
+    border-radius:3px 0px 3px 3px;
+}
+.boxNav{
+    width:960px;
+    height: 36px;
+    background:rgba(235,235,235,1);
+}
+.tab li {
+    position: relative;
+    float: left;
+    width: 96px;
+    height: 36px;
+    line-height: 36px;
+    padding-left: 17px;
+    padding-right: 17px;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    background:rgba(247,247,247,1);
+  }
+.boxInner{
+    position: relative;
+    width:960px;
+    height:534px;
+    background:rgba(255,255,255,1);
+}
+.questionnaire{
+    position: relative;
+    display: none;
+}
+.tab .active {
+   background-color: #fff;
+  }
+
+.selected{
+    display: block;
+}
+.quTitle{
+    margin-top: 23px;
+    font-size:18px;
+    font-weight: 800;
+    font-family:PingFangSC-Medium;
+    color:rgba(51,51,51,1);
+}
+.quTime {
+    margin-top:17px;
+    font-size:14px;
+    font-family:PingFangSC-Regular;
+    color:rgba(51,51,51,1);
+}
+.quExplain{
+    width:920px;
+    height:40px;
+    margin-top: 29px;
+    margin-left: 20px;
+    font-size:14px;
+    font-family:PingFangSC-Regular;
+    color:rgba(51,51,51,1);
+    white-space: wrap;
+}
+.trLine {
+border:0px;
+border-top:1px solid #E5E5E5;
+margin-top: 20px;
+}
+.quState{
+    position: absolute;
+    width:57px;
+    height:24px;
+    left: 883px;
+    background:rgba(82,196,26,1);
+    border-radius:3px;
+    color:rgba(255,255,255,1);
+    line-height: 24px;
+    text-align: center;
+}
+.quBody{
+    height: 235px;
+    overflow: auto;
+}
+.innerDiv{
+    height: auto;
+    margin-top: 25px;
+    margin-left: 20px;
+    font-weight: 700;
+}
+.innerTitle{
+    height: 19px;
+}
+.rightTitle{
+    color: #737373;
+}
+.innerUl li{
+    display: block;
+}
+.innerUl li input,p{
+    display: inline-block;
+}
+.choose{
+    margin-top: 14px;
+}
+.submit{
+    width:80px;
+    height:30px;
+    background:rgba(91,138,249,1);
+    border-radius:3px;
+    margin-left: 19px;
+    margin-top: 44px;
+
+}
+.tip{
+    color:red;
+    display: none;
+}

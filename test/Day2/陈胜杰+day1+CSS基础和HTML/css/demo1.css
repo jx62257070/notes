@@ -1,0 +1,89 @@
+.box{
+    font-size: 14px;
+    margin:auto;
+    margin-top: 10%;
+    width:430px;
+    height:326px;
+    padding:16px,15px,14px,15px;
+}
+.boxInner{
+    position: relative;
+    width:400px;
+    height:296px;
+    background:rgba(255,255,255,1);
+    border-radius:5px;
+    border:1px solid rgba(151,151,151,1);
+}
+.nei1{
+    position: absolute;
+    left:20px;
+    top: 30px;   
+}
+.nei2{
+    position: absolute;
+    left:20px;
+    top: 90px;
+}
+.nei3{
+    width:360px;
+    position: absolute;
+    left:20px;
+    top: 150px;
+}
+.nei4{
+    position: absolute;
+    left:20px;
+    top: 190px;
+}
+.nei5{
+    position: absolute;
+    left:20px;
+    top: 248px;
+}
+.name{
+    width:330px;
+    height:40px;
+    padding-left:30px;
+    background:rgba(255,255,255,1);
+    border-radius:5px;
+    border:1px solid rgba(151,151,151,1);
+    
+}
+.name::placeholder{
+    color: #CCCCCC;
+}
+.login{
+    width:360px;
+    height:40px;
+    background:rgba(74,144,226,1);
+    border-radius:5px;
+    border:1px solid rgba(74,144,226,1);
+    font-family: 'ArialRoundedMTBold';
+    color: #FFF;
+}
+.rem{
+    margin-left: 5px;
+}
+.name1{
+    background-image:url("../images/用户@2x.png");
+    background-size: 18px 19px;/*小图标的大小*/
+    background-position: 9px 11px;/*小图标在input的位置*/
+    background-repeat: no-repeat;/*背景小图标不重复*/
+}
+.name2
+{
+    background-image:url("../images/密码@2x.png");
+    background-size: 18px 19px;/*小图标的大小*/
+    background-position: 9px 11px;/*小图标在input的位置*/
+    background-repeat: no-repeat;/*背景小图标不重复*/
+}
+.color1{
+    color: #4A4A4A;
+}
+.font1{
+    font-family: 'MicrosoftYaHei';
+}
+.font2{
+    font-family: 'PingFangSC';
+}
+

@@ -1,0 +1,9 @@
+.box{
+    width: 200px;
+    height: 200px;
+    margin: 150px auto;
+}
+.btn{
+    float: right;
+    margin-top: 10px;
+}

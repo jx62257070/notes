@@ -1,0 +1,12 @@
+demo1.js：
+全篇的console.log()的内容基本上都用字符串模板
+	1.let使用，class使用，解构赋值(函数参数,返回值),默认参数
+	2.测试默认参数（age）
+	3.解构赋值-函数返回值
+	4.class继承,promise函数
+	5.字符串扩展-includes()、startsWith()、endsWidth()、repeat()
+	6.函数扩展-rest参数,解构赋值-函数返回值
+	7.数组扩展-扩展运算（反rest）、find()、findIndex()、includes()
+	8.对象的扩展-Object.assign()
+demo2.js：
+	测试const是否使变量无法改变//Assignment to constant variable.

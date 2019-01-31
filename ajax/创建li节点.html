@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <input type="button" name="" value="获取JSON" placeholder="">
+    <ul class="bbb111" id="bb11"></ul>
+</body>
+<script src="./jquery-1.12.4.js"></script>
+<script >
+document.querySelector("input").onclick = function(){
+        // ajax
+        //1.创建对象
+        var xhr = new XMLHttpRequest();
+        //2.设置请求行(get请求数据写在url后面)
+        xhr.open('post','getdata.php');
+        //3.设置请求头(get请求可以省略,post不发送数据也可以省略)
+        //3.5注册回调函数
+        xhr.onreadystatechange = function(){
+            if (xhr.readyState==4&&xhr.status==200) {
+                console.log(xhr.responseText);
+                var arr = JSON.parse(xhr.responseText);
+                console.log(arr);
+                for (var i = 0;i <arr.length;i++) {
+                    console.log("姓名:"+arr[i].name+"  技能:"+arr[i].skill);
+                  //jq实现插入节点并且改变节点内容
+                    var exLi =$('<li></li>');
+                    exLi.text("姓名:"+arr[i].name+"  技能:"+arr[i].skill);
+                    $('.bbb111').append(exLi);
+/*                  //1.js实现插入节点并且改变节点内容(通过class获取对象,对象为数组)
+                    var herLi = document.createElement('li');
+                    herLi.innerHTML = "姓名:"+arr[i].name+"  技能:"+arr[i].skill;
+                    var exc=document.getElementsByClassName('bbb111');
+                    exc[0].appendChild(herLi);*/
+
+/*                  //2.js实现插入节点并且改变节点内容(querySelector获取上述第一个对象)
+                    var herLi = document.createElement('li');
+                    herLi.innerHTML = "姓名:"+arr[i].name+"  技能:"+arr[i].skill;
+                    document.querySelector('ul').appendChild(herLi);*/
+/*                  //3.js实现插入节点并且改变节点内容(通过id获取对象)
+                    var herLi =document.createElement('li');
+                    herLi.innerHTML="姓名:"+arr[i].name+"  技能:"+arr[i].skill;
+                    var exc=document.getElementById('bb11');
+                    exc.appendChild(herLi);*/
+                };
+            }
+        }
+        //4.请求主体发送(get请求为空，或者写null，post请求数据写在这里，如果没有数据，直接为空或者写null)
+        xhr.send(null);
+}
+
+</script>
+</html>

@@ -1,0 +1,12 @@
+﻿练习：
+1.向原始的项目中引入vue-router 
+2.在/about页中添加路由前进和后退的按钮
+3.增加一个名字为homework.vue的模块，其对应的路由为/homework/:timestamp ，页面中会展示时间戳的值。路由为/about的页面增加一个按钮能够跳转到homework并将现在的时间戳带入页面中
+注：时间戳 +new Date()
+
+额外的：
+向项目中引入vuex，并在state中定义num值，在/about页中增加一个点击后使num加一的按钮
+2.使用Router.beforeEach(）的路由钩子，将不符合路由匹配的页面指向404页面
+
+
+提交的作业：除了node_modules文件夹的所有文件
